@@ -1,17 +1,20 @@
 package com.example.demo;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 
 @RequestMapping("/greeting")
-@Controller
+@RestController
 public class TestController {
     @GetMapping("/hello")
-    public String hello(@RequestParam(name="huhu") String a, Model model) {
-        model.addAttribute("huhu", a);
-        return "hello";
+    public ResponseEntity<?> hello(@RequestParam(name="huhu") String a) {
+        String bonjour="bonjour";
+        return new ResponseEntity<>(bonjour,HttpStatus.ACCEPTED);
     }
 }
