@@ -7,7 +7,8 @@ psql -U postgres -d culture
 create table utilisateur(
     id_utilisateur serial primary key,
     nom_utilisateur varchar(100),
-    mdp varchar(100)
+    mdp varchar(100),
+    privilege INT
 );
 
 create table culture(
