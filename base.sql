@@ -45,3 +45,8 @@ create table proprietaire(
     foreign key (id_utilisateur) references utilisateur(id_utilisateur),
     foreign key (id_terrain) references terrain(id_terrain)
 );
+
+create or replace view vparcelle as
+select id_parcelle, nom_parcelle, surface_parcelle, culture.id_culture, nom_culture, unite, prix_culture from parcelle
+join culture on culture.id_culture=parcelle.id_culture;
+
