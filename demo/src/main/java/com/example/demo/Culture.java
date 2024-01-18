@@ -9,8 +9,9 @@ import jakarta.persistence.Id;
 public class Culture {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     Integer id_Culture;
+
+    
     String nom_Culture;
     float unite;
     float prix_culture;
