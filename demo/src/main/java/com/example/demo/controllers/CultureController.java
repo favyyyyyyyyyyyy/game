@@ -18,12 +18,12 @@ public class CultureController {
     @Autowired
     private CultureService cultureService;
 
-    @GetMapping("/liste")
+    @GetMapping("/liste_culture")
     public List<Culture> getAllCultures() {
         return cultureService.getAllCultures();
     }
 
-    @PostMapping("/insert")
+    @PostMapping("/insert_culture")
     public Culture insertCulture(@RequestParam String nom, @RequestParam float unite, @RequestParam float prix) {
         return cultureService.insertCulture(nom, unite, prix);
     }
