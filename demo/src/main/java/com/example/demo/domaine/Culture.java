@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.domaine;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ public class Culture {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id_Culture;
 
-    
+
     String nom_Culture;
     float unite;
     float prix_culture;

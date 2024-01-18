@@ -1,7 +1,10 @@
-package com.example.demo;
+package com.example.demo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.domaine.Culture;
+import com.example.demo.repositories.CultureRepository;
 
 import java.util.List;
 
