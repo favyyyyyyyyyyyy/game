@@ -8,5 +8,5 @@ public class Etudiant {
     @GeneratedValue(strategy = GenerationType.)
     Integer id;
     String nom;
-
+    
 }
