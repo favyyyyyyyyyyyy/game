@@ -57,3 +57,5 @@ select id_proprietaire,utilisateur.id_utilisateur,nom_utilisateur,terrain.id_ter
 from proprietaire
 join utilisateur on proprietaire.id_utilisateur=utilisateur.id_utilisateur
 join terrain on proprietaire.id_terrain=terrain.id_terrain;
+
+select * from vparcelle where nom_culture='Mais';

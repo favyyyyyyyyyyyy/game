@@ -22,4 +22,9 @@ public class VparcelleController {
     public List<Vparcelle> getAllVparcelles() {
         return parcelleService.getAllVparcelles();
     }
+
+    @PostMapping("/rNameCulture")
+    public List<Vparcelle> getAllVparcellesByCulture(@RequestParam String nom_culture) {
+        return parcelleService.getVparcellesByName(nom_culture);
+    }
 }
