@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #582900;
+    /* background-color: #d0ffc4; */
+    background-image: url('fond.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#cropTableContainer {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond avec opacité pour voir l'image de fond */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #582900;
+}
+
+#cropTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#cropTable th, #cropTable td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+#cropTable th {
+    background-color: rgba(201, 136, 96, 0.8);
+    font-weight: bold;
+    color: #582900;
+}
+
+#validateButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3fec21;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#validateButton:hover {
+    background-color: #00aa22;
+}
+
+
