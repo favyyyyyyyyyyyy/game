@@ -13,7 +13,7 @@ public class VparcelleService {
     @Autowired
     private VparcelleRepository vparcelleRepository;
 
-    public List<Vparcelle> getAllParcelles() {
+    public List<Vparcelle> getAllVparcelles() {
         return vparcelleRepository.findAll();
     }
 }

@@ -35,6 +35,7 @@ create table terrain(
     surface_terrain float,
     prix_terrain float,
     id_parcelle int,
+    etat_terrain int,
     foreign key (id_parcelle) references parcelle(id_parcelle)
 );
 
@@ -50,3 +51,8 @@ create or replace view vparcelle as
 select id_parcelle, nom_parcelle, surface_parcelle, culture.id_culture, nom_culture, unite, prix_culture from parcelle
 join culture on culture.id_culture=parcelle.id_culture;
 
+create or replace view vproprietaire as
+select id_proprietaire,utilisateur.id_utilisateur,nom_utilisateur,terrain.id_terrain,nom_terrain,prix_terrain,id_parcelle,etat_terrain
+from proprietaire
+join utilisateur on proprietaire.id_utilisateur=utilisateur.id_utilisateur
+join terrain on proprietaire.id_terrain=terrain.id_terrain;
