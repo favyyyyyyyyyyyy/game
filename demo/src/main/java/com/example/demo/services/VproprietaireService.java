@@ -16,4 +16,8 @@ public class VproprietaireService {
     public List<Vproprietaire> getAllVproprietaires() {
         return vproprietaireRepository.findAll();
     }
+
+     public List<Vproprietaire> getProprietaireByNomUtilisateur(String nom_utilisateur) {
+        return vproprietaireRepository.findByNomUtilisateur(nom_utilisateur);
+    }
 }

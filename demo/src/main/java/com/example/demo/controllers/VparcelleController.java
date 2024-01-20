@@ -28,4 +28,9 @@ public class VparcelleController {
     public List<Vparcelle> getParcellesByNomCulture(@RequestParam String nomCulture) {
         return vparcelleService.getParcellesByNomCulture(nomCulture);
     }
+
+    @GetMapping("/by-parcelle")
+    public List<Vparcelle> getParcellesByNomParcelle(@RequestParam String nomParcelle) {
+        return vparcelleService.getParcellesByNomParcelle(nomParcelle);
+    }
 }

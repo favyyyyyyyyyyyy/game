@@ -21,4 +21,8 @@ public class VparcelleService {
         return vparcelleRepository.findByNomCulture(nom_culture);
     }
 
+    public List<Vparcelle> getParcellesByNomParcelle(String nom_parcelle) {
+        return vparcelleRepository.findByNomParcelle(nom_parcelle);
+    }
+
 }

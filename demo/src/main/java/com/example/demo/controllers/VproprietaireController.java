@@ -23,4 +23,9 @@ public class VproprietaireController {
     public List<Vproprietaire> getAllVproprietaires() {
         return vproprietaireService.getAllVproprietaires();
     }
+
+    @GetMapping("/by-utilisateur")
+    public List<Vproprietaire> getVproprietairesByUtilisateur(@RequestParam String nom_utilisateur) {
+        return vproprietaireService.getProprietaireByNomUtilisateur(nom_utilisateur);
+    }
 }

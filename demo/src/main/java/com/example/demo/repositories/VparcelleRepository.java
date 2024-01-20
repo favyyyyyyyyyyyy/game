@@ -8,4 +8,6 @@ import com.example.demo.domaine.Vparcelle;
 
 public interface VparcelleRepository extends JpaRepository<Vparcelle, Integer> {
     List<Vparcelle> findByNomCulture(String nom_culture);
+
+    List<Vparcelle> findByNomParcelle(String nom_parcelle);
 }
