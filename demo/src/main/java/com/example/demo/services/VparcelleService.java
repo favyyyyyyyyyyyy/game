@@ -17,8 +17,8 @@ public class VparcelleService {
         return vparcelleRepository.findAll();
     }
 
-    public List<Vparcelle> getVparcellesByName(String nom_culture)
-    {
-        return vparcelleRepository.findByNom_culture(nom_culture);
+    public List<Vparcelle> getParcellesByNomCulture(String nom_culture) {
+        return vparcelleRepository.findByNomCulture(nom_culture);
     }
+
 }

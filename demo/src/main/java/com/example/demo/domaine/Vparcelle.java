@@ -9,74 +9,103 @@ import jakarta.persistence.Id;
 public class Vparcelle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id_parcelle;
+    Integer idParcelle;
     
-    String nom_parcelle;
-    float surface_parcelle;
-    Integer id_culture;
-    String nom_culture;
+    String nomParcelle;
+    float surfaceParcelle;
+    Integer idCulture;
+    String nomCulture;
     float unite;
-    float prix_culture;
+    float prixCulture;
 
     
     public Vparcelle() {
     }
 
-    
-    public Vparcelle(Integer id_parcelle, String nom_parcelle, float surface_parcelle, Integer id_culture,
-            String nom_culture, float unite, float prix_culture) {
-        this.setId_parcelle(id_parcelle);
-        this.setNom_parcelle(nom_parcelle);
-        this.setSurface_parcelle(surface_parcelle);
-        this.setId_culture(id_culture);
-        this.setNom_culture(nom_culture);
+
+    public Vparcelle(Integer idParcelle, String nomParcelle, float surfaceParcelle, Integer idCulture,
+            String nomCulture, float unite, float prixCulture) {
+        this.setIdParcelle(idParcelle);
+        this.setNomParcelle(nomParcelle);
+        this.setSurfaceParcelle(surfaceParcelle);
+        this.setIdCulture(idCulture);
+        this.setNomCulture(nomCulture);
         this.setUnite(unite);
-        this.setPrix_culture(prix_culture);
+        this.setPrixCulture(prixCulture);
     }
 
 
-    public Integer getId_parcelle() {
-        return id_parcelle;
+    public Integer getIdParcelle() {
+        return idParcelle;
     }
-    public void setId_parcelle(Integer id_parcelle) {
-        this.id_parcelle = id_parcelle;
+
+
+    public void setIdParcelle(Integer idParcelle) {
+        this.idParcelle = idParcelle;
     }
-    public String getNom_parcelle() {
-        return nom_parcelle;
+
+
+    public String getNomParcelle() {
+        return nomParcelle;
     }
-    public void setNom_parcelle(String nom_parcelle) {
-        this.nom_parcelle = nom_parcelle;
+
+
+    public void setNomParcelle(String nomParcelle) {
+        this.nomParcelle = nomParcelle;
     }
-    public float getSurface_parcelle() {
-        return surface_parcelle;
+
+
+    public float getSurfaceParcelle() {
+        return surfaceParcelle;
     }
-    public void setSurface_parcelle(float surface_parcelle) {
-        this.surface_parcelle = surface_parcelle;
+
+
+    public void setSurfaceParcelle(float surfaceParcelle) {
+        this.surfaceParcelle = surfaceParcelle;
     }
-    public Integer getId_culture() {
-        return id_culture;
+
+
+    public Integer getIdCulture() {
+        return idCulture;
     }
-    public void setId_culture(Integer id_culture) {
-        this.id_culture = id_culture;
+
+
+    public void setIdCulture(Integer idCulture) {
+        this.idCulture = idCulture;
     }
-    public String getNom_culture() {
-        return nom_culture;
+
+
+    public String getNomCulture() {
+        return nomCulture;
     }
-    public void setNom_culture(String nom_culture) {
-        this.nom_culture = nom_culture;
+
+
+    public void setNomCulture(String nomCulture) {
+        this.nomCulture = nomCulture;
     }
+
+
     public float getUnite() {
         return unite;
     }
+
+
     public void setUnite(float unite) {
         this.unite = unite;
     }
-    public float getPrix_culture() {
-        return prix_culture;
+
+
+    public float getPrixCulture() {
+        return prixCulture;
     }
-    public void setPrix_culture(float prix_culture) {
-        this.prix_culture = prix_culture;
+
+
+    public void setPrixCulture(float prixCulture) {
+        this.prixCulture = prixCulture;
     }
+
+    
+   
 
     
 }

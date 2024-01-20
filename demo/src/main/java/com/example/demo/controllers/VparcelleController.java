@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,15 +17,15 @@ import java.util.List;
 @RestController
 public class VparcelleController {
      @Autowired
-    private VparcelleService parcelleService;
+    private VparcelleService vparcelleService;
 
     @GetMapping("/liste_vparcelle")
     public List<Vparcelle> getAllVparcelles() {
-        return parcelleService.getAllVparcelles();
+        return vparcelleService.getAllVparcelles();
     }
 
-    @PostMapping("/rNameCulture")
-    public List<Vparcelle> getAllVparcellesByCulture(@RequestParam String nom_culture) {
-        return parcelleService.getVparcellesByName(nom_culture);
+    @GetMapping("/by-culture")
+    public List<Vparcelle> getParcellesByNomCulture(@RequestParam String nomCulture) {
+        return vparcelleService.getParcellesByNomCulture(nomCulture);
     }
 }
