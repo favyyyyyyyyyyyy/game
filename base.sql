@@ -10,7 +10,7 @@ create table utilisateur(
     mdp varchar(100),
     privilege INT
 );
-
+insert into utilisateur(nom_culture,mdp) values('admin','admin',1);
 create table culture(
     id_culture serial primary key,
     nom_culture varchar(100),
