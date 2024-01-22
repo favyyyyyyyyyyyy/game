@@ -96,10 +96,6 @@ public class Vproprietaire {
 
     public void setEtatTerrain(Integer etatTerrain) {
         this.etatTerrain = etatTerrain;
-    }
-
-    
-
-    
+    }    
     
 }
