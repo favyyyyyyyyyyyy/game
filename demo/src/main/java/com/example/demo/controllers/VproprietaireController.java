@@ -13,18 +13,18 @@ import com.example.demo.domaine.Vproprietaire;
 import com.example.demo.services.VproprietaireService;
 
 
-@RequestMapping("/vproprietaire")
+@RequestMapping("/agigame")
 @RestController
 public class VproprietaireController {
     @Autowired
     private VproprietaireService vproprietaireService;
 
-    @GetMapping("/liste_vproprietaire")
+    @GetMapping("/vproprietaires")
     public List<Vproprietaire> getAllVproprietaires() {
         return vproprietaireService.getAllVproprietaires();
     }
 
-    @GetMapping("/by-utilisateur")
+    @GetMapping("/{nom_utilisateur}")
     public List<Vproprietaire> getVproprietairesByUtilisateur(@RequestParam String nom_utilisateur) {
         return vproprietaireService.getProprietaireByNomUtilisateur(nom_utilisateur);
     }

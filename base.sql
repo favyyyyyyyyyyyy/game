@@ -11,6 +11,7 @@ create table utilisateur(
     privilege INT
 );
 insert into utilisateur(nom_utilisateur,mdp,privilege) values('admin','admin',1);
+
 create table culture(
     id_culture serial primary key,
     nom_culture varchar(100),

@@ -13,23 +13,23 @@ import com.example.demo.services.VparcelleService;
 
 import java.util.List;
 
-@RequestMapping("/vparcelles")
+@RequestMapping("/agrigame")
 @RestController
 public class VparcelleController {
      @Autowired
     private VparcelleService vparcelleService;
 
-    @GetMapping("/liste_vparcelle")
+    @GetMapping("/vparcelles")
     public List<Vparcelle> getAllVparcelles() {
         return vparcelleService.getAllVparcelles();
     }
 
-    @GetMapping("/by-culture")
+    @GetMapping("/{nomCulture}")
     public List<Vparcelle> getParcellesByNomCulture(@RequestParam String nomCulture) {
         return vparcelleService.getParcellesByNomCulture(nomCulture);
     }
 
-    @GetMapping("/by-parcelle")
+    @GetMapping("/{nomParcelle}")
     public List<Vparcelle> getParcellesByNomParcelle(@RequestParam String nomParcelle) {
         return vparcelleService.getParcellesByNomParcelle(nomParcelle);
     }
