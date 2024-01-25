@@ -37,13 +37,14 @@ create table terrain(
 );
 -- 1 CREE PAR UTILISATEUR
 -- 10 VALIDER PAR ADMIN
-create table proprietaire(
-    id_proprietaire serial primary key,
-    id_utilisateur int,
-    id_terrain int,
-    foreign key (id_utilisateur) references utilisateur(id_utilisateur),
-    foreign key (id_terrain) references terrain(id_terrain)
-);
+
+-- create table proprietaire(
+--     id_proprietaire serial primary key,
+--     id_utilisateur int,
+--     id_terrain int,
+--     foreign key (id_utilisateur) references utilisateur(id_utilisateur),
+--     foreign key (id_terrain) references terrain(id_terrain)
+-- );
 
 CREATE OR REPLACE VIEW terrainNonValider AS 
 SELECT terrain.id_terrain AS ID,
@@ -59,10 +60,15 @@ create or replace view vparcelle as
 select id_parcelle, nom_parcelle, surface_parcelle, culture.id_culture, nom_culture, unite, prix_culture from parcelle
 join culture on culture.id_culture=parcelle.id_culture;
 
+-- create or replace view vproprietaire as
+-- select id_proprietaire,utilisateur.id_utilisateur,nom_utilisateur,terrain.id_terrain,nom_terrain,prix_terrain,id_parcelle,etat_terrain
+-- from proprietaire
+-- join utilisateur on proprietaire.id_utilisateur=utilisateur.id_utilisateur
+-- join terrain on proprietaire.id_terrain=terrain.id_terrain;
+
 create or replace view vproprietaire as
-select id_proprietaire,utilisateur.id_utilisateur,nom_utilisateur,terrain.id_terrain,nom_terrain,prix_terrain,id_parcelle,etat_terrain
-from proprietaire
-join utilisateur on proprietaire.id_utilisateur=utilisateur.id_utilisateur
-join terrain on proprietaire.id_terrain=terrain.id_terrain;
+select id_utilisateur,nom_utilisateur,id_terrain,nom_terrain,surface_terrain,prix_terrain from terrain
+join utilisateur on terrain.id_utilisateur=utilisateur.id_utilisateur
+join parcelle on terrain.id_parcelle=parcelle.id_parcelle;
 
 select * from vparcelle where nom_culture='Mais';
