@@ -9,38 +9,30 @@ import jakarta.persistence.Id;
 public class Vproprietaire {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idProprietaire;
+    private Long id;
 
     Integer idUtilisateur;
     String nomUtilisateur;
     Integer idTerrain;
     String nomTerrain;
+    float surfaceTerrain;
     float prixTerrain;
-    Integer idParcelle;
     Integer etatTerrain;
 
     public Vproprietaire() {
     }
 
-    public Vproprietaire(Integer idProprietaire, Integer idUtilisateur, String nomUtilisateur, Integer idTerrain,
-            String nomTerrain, float prixTerrain, Integer idParcelle, Integer etatTerrain) {
-        this.setIdProprietaire(idProprietaire);
+    public Vproprietaire(Integer idUtilisateur, String nomUtilisateur, Integer idTerrain, String nomTerrain,
+            float surfaceTerrain, float prixTerrain, Integer etatTerrain) {
         this.setIdUtilisateur(idUtilisateur);
         this.setNomUtilisateur(nomUtilisateur);
         this.setIdTerrain(idTerrain);
         this.setNomTerrain(nomTerrain);
+        this.setSurfaceTerrain(surfaceTerrain);
         this.setPrixTerrain(prixTerrain);
-        this.setIdParcelle(idParcelle);
         this.setEtatTerrain(etatTerrain);
     }
 
-    public Integer getIdProprietaire() {
-        return idProprietaire;
-    }
-
-    public void setIdProprietaire(Integer idProprietaire) {
-        this.idProprietaire = idProprietaire;
-    }
 
     public Integer getIdUtilisateur() {
         return idUtilisateur;
@@ -74,6 +66,14 @@ public class Vproprietaire {
         this.nomTerrain = nomTerrain;
     }
 
+    public float getSurfaceTerrain() {
+        return surfaceTerrain;
+    }
+
+    public void setSurfaceTerrain(float surfaceTerrain) {
+        this.surfaceTerrain = surfaceTerrain;
+    }
+
     public float getPrixTerrain() {
         return prixTerrain;
     }
@@ -82,20 +82,22 @@ public class Vproprietaire {
         this.prixTerrain = prixTerrain;
     }
 
-    public Integer getIdParcelle() {
-        return idParcelle;
-    }
-
-    public void setIdParcelle(Integer idParcelle) {
-        this.idParcelle = idParcelle;
-    }
-
     public Integer getEtatTerrain() {
         return etatTerrain;
     }
 
     public void setEtatTerrain(Integer etatTerrain) {
         this.etatTerrain = etatTerrain;
-    }    
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    
     
 }

@@ -13,7 +13,7 @@ import com.example.demo.domaine.Vproprietaire;
 import com.example.demo.services.VproprietaireService;
 
 
-@RequestMapping("/agigame")
+@RequestMapping("/agrigame")
 @RestController
 public class VproprietaireController {
     @Autowired
