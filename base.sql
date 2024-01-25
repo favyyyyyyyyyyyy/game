@@ -36,7 +36,8 @@ create table terrain(
     prix_terrain float,
     id_parcelle int,
     etat_terrain int,
-    
+    id_utilisateur int ,
+    foreign key (id_utilisateur) references utilisateur(id_utilisateur),
     foreign key (id_parcelle) references parcelle(id_parcelle)
 );
 
