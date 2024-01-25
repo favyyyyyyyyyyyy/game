@@ -1,9 +1,3 @@
--- create table etudiant(
---     id_etudiant int,
---     nom_etudiant varchar(40)
--- );
-psql -U postgres -d culture
-
 create table utilisateur(
     id_utilisateur serial primary key,
     nom_utilisateur varchar(100),
@@ -15,12 +9,11 @@ insert into utilisateur(nom_utilisateur,mdp,privilege) values('admin','admin',1)
 create table culture(
     id_culture serial primary key,
     nom_culture varchar(100),
-    unite float,
     prix_culture float
 );
-insert into culture(nom_culture,unite,prix_culture) values('Mais',1,2000);
-insert into culture(nom_culture,unite,prix_culture) values('Riz',1,3000);
-insert into culture(nom_culture,unite,prix_culture) values('Patate douce',1,1500);
+insert into culture(nom_culture,unite,prix_culture) values('Mais',2000);
+insert into culture(nom_culture,unite,prix_culture) values('Riz',3000);
+insert into culture(nom_culture,unite,prix_culture) values('Patate douce',1500);
 
 
 create table parcelle(
@@ -37,10 +30,13 @@ create table terrain(
     surface_terrain float,
     prix_terrain float,
     id_parcelle int,
+    id_utilisateur int ,
     etat_terrain int,
+    foreign key (id_utilisateur) references utilisateur(id_utilisateur),
     foreign key (id_parcelle) references parcelle(id_parcelle)
 );
-
+-- 1 CREE PAR UTILISATEUR
+-- 10 VALIDER PAR ADMIN
 create table proprietaire(
     id_proprietaire serial primary key,
     id_utilisateur int,
@@ -48,6 +44,16 @@ create table proprietaire(
     foreign key (id_utilisateur) references utilisateur(id_utilisateur),
     foreign key (id_terrain) references terrain(id_terrain)
 );
+
+CREATE OR REPLACE VIEW terrainNonValider AS 
+SELECT terrain.id_terrain AS ID,
+terrain.nom_terrain AS Nom,
+terrain.surface_terrain AS Surface,
+utilisateur.nom_utilisateur AS Proprietaire
+FROM terrain
+JOIN utilisateur ON utilisateur.id_utilisateur = terrain.id_utilisateur 
+WHERE terrain.etat_terrain > 9 ;
+
 
 create or replace view vparcelle as
 select id_parcelle, nom_parcelle, surface_parcelle, culture.id_culture, nom_culture, unite, prix_culture from parcelle
