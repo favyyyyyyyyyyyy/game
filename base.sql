@@ -14,12 +14,11 @@ insert into utilisateur(nom_utilisateur,mdp,privilege) values('admin','admin',1)
 create table culture(
     id_culture serial primary key,
     nom_culture varchar(100),
-    unite float,
     prix_culture float
 );
-insert into culture(nom_culture,unite,prix_culture) values('Mais',1,2000);
-insert into culture(nom_culture,unite,prix_culture) values('Riz',1,3000);
-insert into culture(nom_culture,unite,prix_culture) values('Patate douce',1,1500);
+insert into culture(nom_culture,unite,prix_culture) values('Mais',2000);
+insert into culture(nom_culture,unite,prix_culture) values('Riz',3000);
+insert into culture(nom_culture,unite,prix_culture) values('Patate douce',1500);
 
 
 create table parcelle(
@@ -37,6 +36,7 @@ create table terrain(
     prix_terrain float,
     id_parcelle int,
     etat_terrain int,
+    
     foreign key (id_parcelle) references parcelle(id_parcelle)
 );
 
