@@ -18,13 +18,8 @@ public class TerrainService {
     }
 
 
-    public Terrain insertterrain(String nomTerrain, float surfaceTerrain, float prixTerrain, Integer idParcelle, Integer idUtilisateur) {
-        Terrain terrain = new Terrain();
-        terrain.setNomTerrain(nomTerrain);
-        terrain.setSurfaceTerrain(surfaceTerrain);
-        terrain.setPrixTerrain(prixTerrain);
-        terrain.setIdParcelle(idParcelle);
-        terrain.setIdUtilisateur(idUtilisateur);
+    public Terrain insertterrain(Terrain t) {
+        Terrain terrain = new Terrain(t.getIdTerrain(), t.getNomTerrain(), t.getSurfaceTerrain(), t.getPrixTerrain(), t.getIdParcelle(), t.getIdUtilisateur());
         return terrainRepository.save(terrain);
     }
 }

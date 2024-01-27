@@ -12,9 +12,9 @@ public class UtilisateurService {
     @Autowired
     private UtilisateurRepository utilisateurRepository;
 
-    public Utilisateur login(String nomUtilisateur, String mdp) {
-        return utilisateurRepository.findByNomUtilisateurAndMdp(nomUtilisateur, mdp);
-    }
+    public Utilisateur login(Utilisateur utilisateur) {
+        return utilisateurRepository.findByNomUtilisateurAndMdp(utilisateur.getNomUtilisateur(), utilisateur.getMdp());
+    }    
 
     public Utilisateur register(Utilisateur utilisateur) {
         return utilisateurRepository.save(utilisateur);

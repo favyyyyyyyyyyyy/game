@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +24,8 @@ public class TerrainController {
         return TerrainService.getAllTerrains();
     }
 
-    @PostMapping("/terrains/{nomTerrain}/{surfaceTerrain}/{prixTerrain}/{idParcelle}/{idUtilisateur}")
-    public Terrain insertterrain(@RequestParam String nomTerrain, @RequestParam float surfaceTerrain, @RequestParam float prixTerrain, @RequestParam Integer idParcelle, @RequestParam Integer idUtilisateur) {
-        return TerrainService.insertterrain(nomTerrain, surfaceTerrain, prixTerrain, idParcelle, idUtilisateur);
+    @PostMapping("/terrains")
+    public Terrain insertterrain(@RequestBody Terrain terrain) {
+        return TerrainService.insertterrain(terrain);
     }
 }

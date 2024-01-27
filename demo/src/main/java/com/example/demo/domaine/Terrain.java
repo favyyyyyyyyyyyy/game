@@ -17,8 +17,6 @@ public class Terrain {
     float prixTerrain;
     Integer idParcelle;
     Integer idUtilisateur;
-
-    @Column(columnDefinition = "integer default 1")
     Integer etatTerrain;
 
     
@@ -28,14 +26,14 @@ public class Terrain {
 
     
     public Terrain(Integer idTerrain, String nomTerrain, float surfaceTerrain, float prixTerrain, Integer idParcelle,
-            Integer idUtilisateur, Integer etatTerrain) {
+            Integer idUtilisateur) {
         this.setIdTerrain(idTerrain);
         this.setNomTerrain(nomTerrain);
         this.setSurfaceTerrain(surfaceTerrain);
         this.setPrixTerrain(prixTerrain);
         this.setIdParcelle(idParcelle);
         this.setIdUtilisateur(idUtilisateur);
-        this.setEtatTerrain(etatTerrain);
+        this.setEtatTerrain(1);
     }
 
 
