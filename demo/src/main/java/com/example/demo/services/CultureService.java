@@ -17,11 +17,7 @@ public class CultureService {
         return cultureRepository.findAll();
     }
 
-    public Culture insertCulture(String nom, float unite, float prix) {
-        Culture culture = new Culture();
-        culture.setNom_Culture(nom);
-        culture.setUnite(unite);
-        culture.setPrix_culture(prix);
+    public Culture insertCulture(Culture culture) {
         return cultureRepository.save(culture);
-    }
+    }    
 }

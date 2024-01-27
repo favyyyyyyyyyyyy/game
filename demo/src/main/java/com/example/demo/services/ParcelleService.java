@@ -17,11 +17,7 @@ public class ParcelleService {
         return parcelleRepository.findAll();
     }
 
-    public Parcelle insertParcelle(String nom, float surface, int id_Culture) {
-        Parcelle parcelle = new Parcelle();
-        parcelle.setNom_parcelle(nom);
-        parcelle.setSurface_parcelle(surface);
-        parcelle.setId_culture(id_Culture);
+    public Parcelle insertParcelle(Parcelle parcelle) {
         return parcelleRepository.save(parcelle);
-    }
+    }    
 }

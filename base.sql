@@ -71,4 +71,8 @@ select id_utilisateur,nom_utilisateur,id_terrain,nom_terrain,surface_terrain,pri
 join utilisateur on terrain.id_utilisateur=utilisateur.id_utilisateur
 join parcelle on terrain.id_parcelle=parcelle.id_parcelle;
 
--- select * from vparcelle where nom_culture='Mais'
+create or replace view userterrain as
+select * from utilisateur
+join terrain on terrain.id_utilisateur=utilisateur.id_utilisateur
+join parcelle on terrain.id_parcelle=parcelle.id_parcelle
+join culture on parcelle.id_culture=culture.id_culture where id_utilisateur=1;
