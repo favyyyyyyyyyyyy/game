@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/agrigame")
 @RestController
 public class VparcelleController {
-     @Autowired
+    @Autowired
     private VparcelleService vparcelleService;
 
     @GetMapping("/vparcelles")
