@@ -24,7 +24,7 @@ public class CultureController {
         return cultureService.getAllCultures();
     }
 
-    @PostMapping("/cultures")
+    @PostMapping("/culture")
     public Culture insertCulture(@RequestBody Culture culture) {
         return cultureService.insertCulture(culture);
     }

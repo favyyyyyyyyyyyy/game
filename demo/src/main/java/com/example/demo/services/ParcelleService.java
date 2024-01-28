@@ -19,5 +19,5 @@ public class ParcelleService {
 
     public Parcelle insertParcelle(Parcelle parcelle) {
         return parcelleRepository.save(parcelle);
-    }    
+    }
 }
