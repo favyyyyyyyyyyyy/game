@@ -24,5 +24,4 @@ public class VparcelleService {
     public List<Vparcelle> getParcellesByNomParcelle(String nom_parcelle) {
         return vparcelleRepository.findByNomParcelle(nom_parcelle);
     }
-
 }
