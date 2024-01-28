@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.domaine.Utilisateur;
 import com.example.demo.services.UtilisateurService;
 
-@CrossOrigin
 @RequestMapping("/agrigame")
 @RestController
 public class UtilisateurController {
