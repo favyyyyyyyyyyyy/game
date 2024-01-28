@@ -18,10 +18,11 @@ public class VparcelleService {
     }
 
     public List<Vparcelle> getParcellesByNomCulture(String nom_culture) {
-        return vparcelleRepository.findByCulture(nom_culture);
+        return vparcelleRepository.findByNomCulture(nom_culture);
     }
 
     public List<Vparcelle> getParcellesByNomParcelle(String nom_parcelle) {
-        return vparcelleRepository.findByParcelle(nom_parcelle);
+        return vparcelleRepository.findByNomParcelle(nom_parcelle);
     }
+
 }
