@@ -32,7 +32,6 @@ public class UtilisateurController {
         }
     }
 
-
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody Utilisateur utilisateur) {
         Utilisateur savedUser = utilisateurService.register(utilisateur);
