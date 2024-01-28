@@ -24,11 +24,11 @@ public class Utilisateur {
 
     
 
-    public Utilisateur(Integer idUtilisateur, String nomUtilisateur, String mdp, Integer privilege) {
+    public Utilisateur(Integer idUtilisateur, String nomUtilisateur, String mdp) {
         this.setIdUtilisateur(idUtilisateur);
         this.setNomUtilisateur(nomUtilisateur);
         this.setMdp(mdp);
-        this.setPrivilege(privilege);
+        this.setPrivilege(0);
     }
 
 
