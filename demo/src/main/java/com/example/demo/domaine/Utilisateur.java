@@ -12,7 +12,7 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer idUtilisateur;
 
-    String nom_utilisateur;
+    String nomUtilisateur;
     String mdp;
 
     @Column(columnDefinition = "integer default 0")

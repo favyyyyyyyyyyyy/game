@@ -24,7 +24,7 @@ public class TerrainController {
         return TerrainService.getAllTerrains();
     }
 
-    @PostMapping("/terrains")
+    @PostMapping("/terrain")
     public Terrain insertterrain(@RequestBody Terrain terrain) {
         return TerrainService.insertterrain(terrain);
     }

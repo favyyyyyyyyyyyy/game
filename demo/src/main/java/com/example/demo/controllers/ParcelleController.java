@@ -24,7 +24,7 @@ public class ParcelleController {
         return parcelleService.getAllParcelles();
     }
 
-    @PostMapping("/parcelles")
+    @PostMapping("/parcelle")
     public Parcelle insertParcelle(@RequestBody Parcelle parcelle) {
         return parcelleService.insertParcelle(parcelle);
     }
