@@ -57,7 +57,7 @@ WHERE terrain.etat_terrain > 9 ;
 
 
 create or replace view vparcelle as
-select id_parcelle, nom_parcelle, surface_parcelle, culture.id_culture, nom_culture, unite, prix_culture from parcelle
+select id_parcelle, nom_parcelle, surface_parcelle, culture.id_culture, nom_culture, prix_culture from parcelle
 join culture on culture.id_culture=parcelle.id_culture;
 
 -- create or replace view vproprietaire as

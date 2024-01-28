@@ -9,15 +9,14 @@ import jakarta.persistence.Id;
 public class Vproprietaire {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     Integer idUtilisateur;
+
     String nomUtilisateur;
     Integer idTerrain;
     String nomTerrain;
     float surfaceTerrain;
     float prixTerrain;
-    Integer etatTerrain;
+    Integer etatTerrain; 
 
     public Vproprietaire() {
     }
@@ -89,15 +88,5 @@ public class Vproprietaire {
     public void setEtatTerrain(Integer etatTerrain) {
         this.etatTerrain = etatTerrain;
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    
     
 }

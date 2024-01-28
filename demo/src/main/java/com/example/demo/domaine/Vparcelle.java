@@ -15,7 +15,6 @@ public class Vparcelle {
     float surfaceParcelle;
     Integer idCulture;
     String nomCulture;
-    float unite;
     float prixCulture;
 
     
@@ -24,13 +23,12 @@ public class Vparcelle {
 
 
     public Vparcelle(Integer idParcelle, String nomParcelle, float surfaceParcelle, Integer idCulture,
-            String nomCulture, float unite, float prixCulture) {
+            String nomCulture, float prixCulture) {
         this.setIdParcelle(idParcelle);
         this.setNomParcelle(nomParcelle);
         this.setSurfaceParcelle(surfaceParcelle);
         this.setIdCulture(idCulture);
         this.setNomCulture(nomCulture);
-        this.setUnite(unite);
         this.setPrixCulture(prixCulture);
     }
 
@@ -85,16 +83,6 @@ public class Vparcelle {
     }
 
 
-    public float getUnite() {
-        return unite;
-    }
-
-
-    public void setUnite(float unite) {
-        this.unite = unite;
-    }
-
-
     public float getPrixCulture() {
         return prixCulture;
     }
@@ -103,9 +91,4 @@ public class Vparcelle {
     public void setPrixCulture(float prixCulture) {
         this.prixCulture = prixCulture;
     }
-
-    
-   
-
-    
 }

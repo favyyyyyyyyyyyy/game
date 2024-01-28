@@ -13,7 +13,6 @@ public class Culture {
 
 
     String nom_Culture;
-    float unite;
     float prix_culture;
 
     
@@ -21,10 +20,9 @@ public class Culture {
     }
 
     
-    public Culture(Integer id_Culture, String nom_Culture, float unite, float prix_culture) {
+    public Culture(Integer id_Culture, String nom_Culture, float prix_culture) {
         this.setId_Culture(id_Culture);
         this.setNom_Culture(nom_Culture);
-        this.setUnite(unite);
         this.setPrix_culture(prix_culture);
     }
 
@@ -40,12 +38,6 @@ public class Culture {
     }
     public void setNom_Culture(String nom_Culture) {
         this.nom_Culture = nom_Culture;
-    }
-    public float getUnite() {
-        return unite;
-    }
-    public void setUnite(float unite) {
-        this.unite = unite;
     }
     public float getPrix_culture() {
         return prix_culture;
