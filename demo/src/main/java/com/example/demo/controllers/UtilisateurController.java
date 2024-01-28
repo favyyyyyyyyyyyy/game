@@ -21,20 +21,20 @@ public class UtilisateurController {
     @Autowired
     private UtilisateurService utilisateurService;
     
-    @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Utilisateur utilisateur) {
-        Utilisateur loggedInUser = utilisateurService.login(utilisateur);
+    // @PostMapping("/login")
+    // public ResponseEntity<String> login(@RequestBody Utilisateur utilisateur) {
+    //     Utilisateur loggedInUser = utilisateurService.login(utilisateur);
 
-        if (loggedInUser != null) {
-            return ResponseEntity.ok("Login successful! Welcome " + loggedInUser.getNomUtilisateur());
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login failed. Invalid credentials.");
-        }
-    }
+    //     if (loggedInUser != null) {
+    //         return ResponseEntity.ok("Login successful! Welcome " + loggedInUser.getNomUtilisateur());
+    //     } else {
+    //         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login failed. Invalid credentials.");
+    //     }
+    // }
 
-    @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody Utilisateur utilisateur) {
-        Utilisateur savedUser = utilisateurService.register(utilisateur);
-        return ResponseEntity.ok("User registered successfully with ID: " + savedUser.getIdUtilisateur());
-    }
+    // @PostMapping("/register")
+    // public ResponseEntity<String> register(@RequestBody Utilisateur utilisateur) {
+    //     Utilisateur savedUser = utilisateurService.register(utilisateur);
+    //     return ResponseEntity.ok("User registered successfully with ID: " + savedUser.getIdUtilisateur());
+    // }
 }
