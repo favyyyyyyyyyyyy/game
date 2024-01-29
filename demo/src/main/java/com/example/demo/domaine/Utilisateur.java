@@ -14,8 +14,6 @@ public class Utilisateur {
 
     String nomUtilisateur;
     String mdp;
-
-    @Column(columnDefinition = "integer default 0")
     Integer privilege;
 
     
