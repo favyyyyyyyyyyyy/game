@@ -21,6 +21,7 @@ public class CultureController {
 
     @GetMapping("/cultures")
     public List<Culture> getAllCultures() {
+        System.out.println("culture");
         return cultureService.getAllCultures();
     }
 
