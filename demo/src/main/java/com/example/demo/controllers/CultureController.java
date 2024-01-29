@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,17 +16,14 @@ import java.util.List;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/agrigame")
 
 public class CultureController {
     @Autowired
     private CultureService cultureService;
 
-    @GetMapping("/cultures")
-    public List<Culture> getAllCultures() {
-        System.out.println("culture");
-        return cultureService.getAllCultures();
-    }
+
 
     @PostMapping("/culture")
     public Culture insertCulture(@RequestBody Culture culture) {
