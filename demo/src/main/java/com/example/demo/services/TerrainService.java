@@ -17,9 +17,8 @@ public class TerrainService {
         return terrainRepository.findAll();
     }
 
-
     public Terrain insertterrain(Terrain t) {
         Terrain terrain = new Terrain(t.getIdTerrain(), t.getNomTerrain(), t.getSurfaceTerrain(), t.getPrixTerrain(), t.getIdParcelle(), t.getIdUtilisateur());
         return terrainRepository.save(terrain);
-    }
+    } 
 }
