@@ -19,5 +19,5 @@ public class CultureService {
 
     public Culture insertCulture(Culture culture) {
         return cultureRepository.save(culture);
-    }    
+    }
 }

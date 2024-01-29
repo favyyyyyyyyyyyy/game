@@ -20,8 +20,6 @@ public class Utilisateur {
     public Utilisateur() {
     }
 
-    
-
     public Utilisateur(Integer idUtilisateur, String nomUtilisateur, String mdp) {
         this.setIdUtilisateur(idUtilisateur);
         this.setNomUtilisateur(nomUtilisateur);

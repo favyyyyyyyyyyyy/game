@@ -17,6 +17,7 @@ public class UtilisateurService {
     }    
 
     public Utilisateur register(Utilisateur utilisateur) {
-        return utilisateurRepository.save(utilisateur);
+        Utilisateur u= new Utilisateur(utilisateur.getIdUtilisateur(), utilisateur.getNomUtilisateur(), utilisateur.getMdp());
+        return utilisateurRepository.save(u);
     }
 }
