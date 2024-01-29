@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.domaine.Vparcelle;
 
 public interface VparcelleRepository extends JpaRepository<Vparcelle, Integer> {
-    List<Vparcelle> findByNomCulture(String nom_culture);
+    List<Vparcelle> findByNomCulture(String nomCulture);
 
-    List<Vparcelle> findByNomParcelle(String nom_parcelle);
+    List<Vparcelle> findByNomParcelle(String nomParcelle);
 }

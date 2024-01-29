@@ -11,7 +11,7 @@ public class Parcelle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id_parcelle;
 
-    String nom_parcelle;
+    String nomParcelle;
     float surface_parcelle;
     Integer id_culture;
 
