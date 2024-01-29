@@ -23,7 +23,11 @@ public class CultureController {
     @Autowired
     private CultureService cultureService;
 
-
+    @GetMapping("/cultures")
+    public List<Culture> getAllCultures() {
+        System.out.println("culture");
+        return cultureService.getAllCultures();
+    }
 
     @PostMapping("/culture")
     public Culture insertCulture(@RequestBody Culture culture) {
