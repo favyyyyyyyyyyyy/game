@@ -16,10 +16,12 @@ import com.example.demo.services.VproprietaireService;
 @RequestMapping("/agrigame")
 @RestController
 public class VproprietaireController {
+    @Autowired
+    private VproprietaireService vproprietaireService;
 
     @GetMapping("/vproprietaires")
-    public String getAllVproprietaires() {
-        return "huu";
+    public List<Vproprietaire> getAllVproprietaires() {
+        return vproprietaireService.getAllVproprietaires();
     }
 
     // @GetMapping("/{nom_utilisateur}")
