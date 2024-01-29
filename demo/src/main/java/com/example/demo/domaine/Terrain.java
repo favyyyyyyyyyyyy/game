@@ -79,4 +79,11 @@ public class Terrain {
     public void setEtatTerrain(Integer etatTerrain) {
         this.etatTerrain = etatTerrain;
     }    
+
+    public void updateTerrainInfo(Terrain updatedTerrain) {
+        this.setNomTerrain(updatedTerrain.getNomTerrain());
+        this.setSurfaceTerrain(updatedTerrain.getSurfaceTerrain());
+        this.setPrixTerrain(updatedTerrain.getPrixTerrain());
+    }
+    
 }

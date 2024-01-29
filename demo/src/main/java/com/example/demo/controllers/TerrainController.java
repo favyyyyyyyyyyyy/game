@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,5 +29,10 @@ public class TerrainController {
     @PostMapping("/terrain")
     public Terrain insertterrain(@RequestBody Terrain terrain) {
         return TerrainService.insertterrain(terrain);
+    }
+
+    @PutMapping("/terrain/{idTerrain}/{idUtilisateur}")
+    public void updateTerrainInfo(@PathVariable Integer idTerrain, @PathVariable Integer idUtilisateur, @RequestBody Terrain updatedTerrain) {
+        TerrainService.updateTerrainInfo(idTerrain, idUtilisateur, updatedTerrain);
     }
 }

@@ -6,5 +6,5 @@ import com.example.demo.domaine.Terrain;
 
 public interface TerrainRepository extends JpaRepository<Terrain, Integer>
 {
-    
+    Terrain findByIdTerrain(Integer idTerrain);
 }
