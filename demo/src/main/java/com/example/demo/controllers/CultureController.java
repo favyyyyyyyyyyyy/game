@@ -13,8 +13,10 @@ import com.example.demo.services.CultureService;
 
 import java.util.List;
 
-@RequestMapping("/agrigame")
+
 @RestController
+@RequestMapping("/agrigame")
+
 public class CultureController {
     @Autowired
     private CultureService cultureService;
