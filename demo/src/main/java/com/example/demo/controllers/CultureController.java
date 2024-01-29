@@ -29,7 +29,7 @@ public class CultureController {
         return cultureService.getAllCultures();
     }
 
-    @PostMapping("/culture")
+    @PostMapping("/post")
     public Culture insertCulture(@RequestBody Culture culture) {
         System.out.println("culture");
         return cultureService.insertCulture(culture);
