@@ -12,7 +12,7 @@ public class Culture {
     Integer id_Culture;
 
 
-    String nomCulture;
+    String nom_Culture;
     float prix_culture;
 
     
