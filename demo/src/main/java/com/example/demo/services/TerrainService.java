@@ -32,11 +32,19 @@ public class TerrainService {
         Terrain existingTerrain = getTerrainById(idTerrain);
 
         if (existingTerrain != null && existingTerrain.getIdUtilisateur().equals(idUtilisateur)) {
-            existingTerrain.updateTerrainInfo(updatedTerrain);
+            if (updatedTerrain.getNomTerrain() != null) {
+                existingTerrain.setNomTerrain(updatedTerrain.getNomTerrain());
+            }
 
+            if (updatedTerrain.getSurfaceTerrain() != 0) {
+                existingTerrain.setSurfaceTerrain(updatedTerrain.getSurfaceTerrain());
+            }
+
+            if (updatedTerrain.getPrixTerrain() != 0) {
+                existingTerrain.setPrixTerrain(updatedTerrain.getPrixTerrain());
+            }
             terrainRepository.save(existingTerrain);
         } else {
-            
         }
     }
 }
