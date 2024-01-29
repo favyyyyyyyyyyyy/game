@@ -25,12 +25,12 @@ public class VparcelleController {
     }
 
     @GetMapping("/culture/{nomCulture}")
-    public List<Vparcelle> getParcellesByNomCulture(@RequestParam String nomCulture) {
+    public List<Vparcelle> getParcellesByNomCulture(@PathVariable String nomCulture) {
         return vparcelleService.getParcellesByNomCulture(nomCulture);
     }
 
     @GetMapping("/parcelle/{nomParcelle}")
-    public List<Vparcelle> getParcellesByNomParcelle(@RequestParam String nomParcelle) {
+    public List<Vparcelle> getParcellesByNomParcelle(@PathVariable String nomParcelle) {
         return vparcelleService.getParcellesByNomParcelle(nomParcelle);
     }
 }

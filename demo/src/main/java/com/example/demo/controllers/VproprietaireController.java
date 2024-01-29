@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,8 +25,8 @@ public class VproprietaireController {
         return vproprietaireService.getAllVproprietaires();
     }
 
-    @GetMapping("/{nomUtilisateur}")
-    public List<Vproprietaire> getVproprietairesByUtilisateur(@RequestParam String nomUtilisateur) {
+    @GetMapping("/vproprietaires/{nomUtilisateur}")
+    public List<Vproprietaire> getVproprietairesByUtilisateur(@PathVariable String nomUtilisateur) {
         return vproprietaireService.getProprietaireByNomUtilisateur(nomUtilisateur);
     }
 }
