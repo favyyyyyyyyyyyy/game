@@ -16,6 +16,7 @@ import com.example.demo.services.UtilisateurService;
 
 @RequestMapping("/agrigame")
 @RestController
+@CrossOrigin
 public class UtilisateurController {
     @Autowired
     private UtilisateurService utilisateurService;
